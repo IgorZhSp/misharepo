@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Модели в Django</title>
+</head>
+
+<body class="container">
+    <form method="POST" action="create/">
+        {% csrf_token %}
+		
+		<h3 align="center">e12345rttyu</h3><br><br>
+        <p align="center">
+            <label align='center'>Введите имя</label><br>
+            <input type="text" name="name" />
+        </p>
+		<p align='center'>
+            <label align='center'>Введите Date</label><br>
+            <input type="date" name="dt1" /><br>
+			
+			<label align='center'>Введите Time</label><br>
+            <input type="time" name="dt1" /><br>
+			
+			<label align='center'>Введите Duration</label><br>
+            <input type="duration" name="dt1" /><br><br><br>
+			
+			<select type="combobox"  name="sity">
+			<option value="s1">Київ-Жуляни</option>
+			<option value="s2">Київ-Бориспіль</option>
+			<option value="s3">Одеса</option>
+			<option value="s4">Львів</option>
+			</select>
+        </p>
+        <p>
+            <label>Введите возраст</label><br>
+            <input type="number" name="age" />
+        </p>
+        <input type="submit" value="Сохранить" >
+    </form>
+	
+<!--    {% if people.count > 0 %}
+    <h2 align="center">Список пользователей</h2>
+    <table>
+        <thead><th>Id</th><th>Имя</th><th>Возраст</th><th></th></thead>
+        {% for person in people %}
+        <tr>
+            <td>{{ person.id }}</td>
+            <td>{{ person.name }}</td>
+            <td>{{ person.age }}</td>
+            <td><a href="edit/{{person.id}}">Изменить</a> | <a href="delete/{{person.id}}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}-->
+	
+</body>
+</html>
